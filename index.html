@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>TTK4155 Byggern</title>
+
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="text-center">Byggern web panel</h1>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="card my-3">
+                    <div class="card-header">
+                        Controller parameters
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <label for="KPInput">K_p</label>
+                                    <input type="number" class="form-control" id="KPInput" step="1">
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <label for="KIInput">K_i</label>
+                                    <input type="number" class="form-control" id="KIInput" step="0.01">
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <label for="KDInput">K_d</label>
+                                    <input type="number" class="form-control" id="KDInput" step="1">
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-lg btn-primary mt-4">Update controller parameters</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="card my-3">
+                    <div class="card-header">
+                        Game controls
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="motorInput">Motor reference</label>
+                                    <input type="range" class="form-control" id="motorInput" min="0" max="255">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="servoInput">Servo position</label>
+                                    <input type="range" class="form-control" id="servoInput" min="0" max="100">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <button type="button" class="btn btn-lg btn-success mt-4">Shoot</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
