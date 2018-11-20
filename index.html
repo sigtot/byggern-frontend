@@ -25,25 +25,27 @@
                         Controller parameters
                     </div>
                     <div class="card-body">
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <label for="KPInput">K_p</label>
-                                    <input type="number" class="form-control" id="KPInput" step="1">
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <label for="KIInput">K_i</label>
-                                    <input type="number" class="form-control" id="KIInput" step="0.01">
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <label for="KDInput">K_d</label>
-                                    <input type="number" class="form-control" id="KDInput" step="1">
-                                </div>
-                                <div class="col-12">
-                                    <button type="button" class="btn btn-lg btn-primary mt-4">Update controller parameters</button>
+                        <form id="pidForm" action="">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4">
+                                        <label for="KPInput">K_p</label>
+                                        <input type="number" class="form-control" id="KPInput" name="KP" step="10">
+                                    </div>
+                                    <div class="col-12 col-sm-4">
+                                        <label for="KIInput">K_i</label>
+                                        <input type="number" class="form-control" id="KIInput" name="KI" step="1">
+                                    </div>
+                                    <div class="col-12 col-sm-4">
+                                        <label for="KDInput">K_d</label>
+                                        <input type="number" class="form-control" id="KDInput" name="KD" step="10">
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-lg btn-primary mt-4" id="pidButton">Update controller parameters</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -63,8 +65,8 @@
                                     <label for="servoInput">Servo position</label>
                                     <input type="range" class="form-control" id="servoInput" min="0" max="100">
                                 </div>
-                                <div class="col-12 col-sm-6">
-                                    <button type="button" class="btn btn-lg btn-success mt-4">Shoot</button>
+                                <div class="col-12 col-sm-6 text-center text-sm-left">
+                                    <button type="button" class="btn btn-lg btn-success mt-4" id="shootButton">Shoot</button>
                                 </div>
                             </div>
                         </div>
